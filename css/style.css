@@ -1,8 +1,161 @@
+* { box-sizing: border-box; }
+
+/* ===== 2. Загальні стилі сторінки (body) ===== */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #555;
-    color: #FFF;
-    max-width: 1280px;
-    margin: 50px auto;
-    padding: 20px;
+  margin: 0 auto;
+  max-width: 80em; /* Обмеження ширини контейнера */
+  padding-left: 16px;  /* Внутрішній відступ зліва */
+  padding-right: 16px; /* Внутрішній відступ справа */
+  background: #1e1e1e;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+a { color: #ff4d4d; text-decoration: none; }
+
+section, .site-header, .site-footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+h2 { font-size: 28px; margin: 0 0 16px; }
+.accent { color: #e53935; }
+
+/* ===== 3. Стилізація шапки сайту (header) ===== */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;    /* Внутрішній відступ зверху */
+  padding-bottom: 20px; /* Внутрішній відступ знизу */
+}
+
+.nav-list { display: flex; gap: 24px; list-style: none; margin: 0; padding: 0; }
+.nav-list a, .lang-switch a { color: #fff; font-size: 13px; text-transform: uppercase; }
+.header-tools { display: flex; gap: 16px; align-items: center; }
+
+.banner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.banner h1 { font-size: 44px; margin: 0 0 16px; }
+.banner img { border-radius: 150px 150px 0 0; max-width: 100%; height: auto; }
+.btn { display: inline-block; background: #e53935; color: #fff; padding: 10px 20px; border-radius: 4px; font-size: 13px; text-transform: uppercase; }
+.btn-outline { background: none; border: 1px solid #e53935; }
+
+.cards, .carousel { display: flex; gap: 16px; }
+.carousel { overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+
+.card {
+  background: #2a2a2a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  min-width: 240px;
+  scroll-snap-align: start;
+  margin: 0;
+}
+
+.card h3 { font-size: 48px; margin: 0; }
+.news h3, .review h3 { font-size: 15px; }
+.news img, .news video { width: 100%; height: auto; border-radius: 6px; }
+
+/* ===== 4. Стилізація розділів сайту (section) та їх елементів ===== */
+section {
+  margin-top: 40px;   /* Зовнішній відступ зверху */
+  margin-bottom: 40px;/* Зовнішній відступ знизу для проміжку між розділами */
+}
+
+/* Розділ “Наші спеціальності” — картки */
+#specialities .card {
+  padding: 20px;                 /* Внутрішні відступи карток */
+  border: 1px solid #8E8E8E;     /* Рамочка товщиною 1px */
+  border-radius: 20px;           /* Заокруглення кутів */
+}
+
+/* Розділ “Якщо в числах” */
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 10px;                 /* Внутрішні відступи карток з інформацією */
+}
+.stat:not(:last-child) {
+  border-left: 1px solid #FF3A3A; /* Границя зліва для всіх, крім останньої */
+}
+.stat strong { font-size: 44px; }
+
+/* Розділ “Відгуки випускників” — картки */
+.review {
+  padding: 20px;                 /* Внутрішні відступи */
+  border: 1px solid #8E8E8E;     /* Рамочка товщиною 1px */
+  border-radius: 20px;           /* Заокруглення кутів */
+}
+
+.review footer { display: flex; align-items: center; gap: 8px; }
+.review footer img { border-radius: 50%; }
+.section-head { display: flex; justify-content: space-between; align-items: center; }
+.carousel-controls button { width: 32px; height: 32px; border-radius: 50%; border: 0; background: #666; color: #fff; cursor: pointer; }
+.audio-review { margin: 24px 0 0; }
+
+.science { display: flex; gap: 32px; align-items: center; }
+.science img { max-width: 50%; height: auto; border-radius: 8px; }
+
+#partners { text-align: center; background: #333; max-width: none; }
+.logos { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; list-style: none; padding: 0; }
+.logos img { max-width: 160px; height: auto; }
+
+#contacts { text-align: center; }
+#contacts address { font-style: normal; font-weight: 600; margin-bottom: 24px; }
+.contact-cols { display: flex; justify-content: space-around; text-align: center; }
+.socials { list-style: none; padding: 0; display: flex; gap: 12px; justify-content: center; }
+
+/* Розділ “Новини” */
+.news:not(:last-child) {
+  border-left: 1px solid #FF3A3A; /* Границя зліва для карток новин, крім останньої */
+}
+.news {
+  padding: 10px;                 /* Внутрішні відступи для блоку з контентом всередині картки */
+}
+
+/* ===== 5. Стилізація нижнього колонтитулу сайту (footer) ===== */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  border-top: 1px solid #333;
+  padding-top: 40px;    /* Внутрішні відступи зверху */
+  padding-bottom: 40px; /* Внутрішні відступи знизу */
+}
+
+.site-footer address { font-style: normal; }
+.footer-center { text-align: center; }
+
+@media (max-width: 760px) {
+  .banner, .science, .cards, .contact-cols, .site-footer { flex-direction: column; }
+  .science img { max-width: 100%; }
+  .nav-list { gap: 12px; flex-wrap: wrap; }
+}
+
+/* ===== Практична №4: таблиця та форма ===== */
+.curriculum-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; table-layout: fixed; }
+.curriculum-table caption { text-align: left; font-size: 14px; color: #aaa; padding-bottom: 12px; }
+.curriculum-table th, .curriculum-table td { padding: 10px 14px; border: 1px solid #333; text-align: left; }
+.curriculum-table thead th { background: #4a4a4a; text-align: center; }
+.curriculum-table tbody tr:nth-child(odd) { background: #242424; }
+.curriculum-table tfoot th, .curriculum-table tfoot td { background: #2a2a2a; font-weight: 700; }
+.col-subject { width: 35%; }
+.col-credits { width: 15%; }
+
+.admission-form { display: flex; flex-direction: column; gap: 14px; max-width: 800px; }
+.form-row { display: flex; flex-direction: column; gap: 4px; }
+.form-row label { font-size: 14px; }
+.req { color: #e53935; }
+.form-row input, .form-row textarea { background: transparent; color: #fff; border: 0; border-bottom: 1px solid #444; padding: 8px 0; font: inherit; }
+.form-row input:focus { outline: none; border-bottom-color: #e53935; }
+.form-row textarea { background: #e0e0e0; color: #222; border: 0; padding: 8px; }
+.admission-form .btn { align-self: flex-end; border: 0; cursor: pointer; }
+
+@media (max-width: 760px) {
+  .curriculum-table { font-size: 13px; }
 }
