@@ -1,0 +1,47 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #2c3e50;
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin: 40px 0;
+}
+
+header {
+  padding: 20px 0;
+}
+
+#reviews .carousel .card {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #8e8e8e;
+}
+
+#numbers .cards .stat {
+  padding: 10px;
+  border-left: 1px solid #FF3A3A;
+}
+#numbers .cards .stat:last-child {
+  border-left: none;
+}
+
+#news .carousel .news {
+  border-left: 1px solid #FF3A3A;
+}
+#news .carousel .news:last-child {
+  border-left: none;
+}
+#news .carousel .news {
+  padding: 10px;
+}
+
+#specialities .cards .card {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #8e8e8e;
+}
+
+/*# sourceMappingURL=main.css.map */
