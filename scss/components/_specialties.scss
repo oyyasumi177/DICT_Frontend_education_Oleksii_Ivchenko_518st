@@ -1,0 +1,7 @@
+#specialities {
+  .cards {
+    .card {
+      @include card;
+    }
+  }
+}

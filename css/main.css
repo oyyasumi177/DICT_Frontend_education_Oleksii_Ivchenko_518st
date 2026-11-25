@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Geologica:wght@100..900&display=swap");
+:root {
+  --primary-color: #1d1d1d;
+  --primary-text-color: #f8f8f8;
+  --red-color: #ff3b39;
+  --red-hover-color: #ff1a18;
+  --grey-color: #7c7c7c;
+  --silver-color: #bfbfbf;
+}
+
+[data-theme=light] {
+  --primary-color: #f8f8f8;
+  --primary-text-color: #1d1d1d;
+  --red-color: #ff3b39;
+  --red-hover-color: #ff1a18;
+  --grey-color: #7c7c7c;
+  --silver-color: #bfbfbf;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Comfortaa", sans-serif;
+  color: var(--primary-text-color);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.4;
+  font-weight: 700;
+  font-family: "Geologica", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 38px;
+}
+
+h2, .h2 {
+  font-size: 32px;
+}
+
+h3, .h3 {
+  font-size: 28px;
+}
+
+h4, .h4 {
+  font-size: 24px;
+}
+
+h5, .h5 {
+  font-size: 18px;
+}
+
+h6, .h6 {
+  font-size: 16px;
+}
+
+.p, p {
+  font-size: 14px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.small, small {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.scc_large-text,
+.large {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--red-color);
+  font-weight: 400;
+  text-decoration: underline;
+}
+a:active, a:hover, a:focus {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--primary-text-color);
+  max-width: 80em;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  margin: 40px 0;
+}
+
+a {
+  color: var(--red-color);
+}
+
+.button,
+.btn {
+  background: var(--red-color);
+  color: var(--primary-text-color);
+  width: fit-content;
+  padding: 7px 14px;
+  border-radius: 5px;
+  margin: 40px 0;
+  border: 1px solid var(--red-color);
+}
+.button p,
+.btn p {
+  margin: 0;
+}
+.button:hover,
+.btn:hover {
+  background: var(--red-hover-color);
+  border-color: var(--red-hover-color);
+}
+.button:focus,
+.btn:focus {
+  background: var(--primary-color);
+}
+
+header {
+  padding: 20px 0;
+}
+
+#reviews .carousel .card {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #7c7c7c;
+}
+
+#numbers .cards .stat {
+  padding: 10px;
+  border-left: 1px solid #ff3b39;
+}
+#numbers .cards .stat:last-child {
+  border-left: none;
+}
+
+#news .carousel .news {
+  border-left: 1px solid #ff3b39;
+}
+#news .carousel .news:last-child {
+  border-left: none;
+}
+#news .carousel .news {
+  padding: 10px;
+}
+
+#specialities .cards .card {
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #7c7c7c;
+}
+
+/*# sourceMappingURL=main.css.map */
