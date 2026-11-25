@@ -1,0 +1,11 @@
+#news {
+  .carousel {
+    .news {
+      border-left: 1px solid $red;
+      &:last-child {
+        border-left: none;
+      }
+      padding: 10px;
+    }
+  }
+}
